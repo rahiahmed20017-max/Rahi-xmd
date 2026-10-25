@@ -1,0 +1,58 @@
+{
+  "name": "x-miku multi session whatsapp bot",
+  "description": "Baileys WhatsApp bot miku.",
+  "repository": "https://github.com/nightx-rebel/miku.git",
+  "keywords": [
+    "whatsapp",
+    "baileys",
+    "bot",
+    "nodejs"
+  ],
+  "stack": "heroku-24",
+
+  "env": {
+    "TG_GROUP_ID": {
+      "description": "telegram group id",
+      "value": "",
+      "required": false
+    },
+    "TG_GROUP_LINK": {
+      "description": "telegram group link",
+      "value": "",
+      "required": false
+    },
+    "WA_CHANNEL_LINK": {
+      "description": "whatsapp channel link",
+      "value": "",
+      "required": false
+    },
+    "BOT_TOKEN": {
+      "description": "telegram bot token",
+      "value": "",
+      "required": false
+    }
+  },
+
+  "addons": [
+    {
+      "plan": "heroku-postgresql:essential-0",
+      "as": "DATABASE"
+    }
+  ],
+
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    }
+  ],
+
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}
