@@ -36,11 +36,11 @@
     "node-telegram-bot-api": "^0.67.0",
     "node-webpmux": "^3.2.1",
     "pg": "^8.23.1",
-    "pino": "^10.1.0",
+    "pm2": "^7.1.1",
     "protobufjs": "^8.8.1",
     "tough-cookie": "^6.0.0",
     "uuid": "^13.0.0",
     "wa-multi-socket": "github:nightx-rebel/socksy",
-    "yt-search": "^2.13.1"
+    "yt-search": "latest"
   }
 }
